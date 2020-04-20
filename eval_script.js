@@ -6,17 +6,10 @@ const __conf = String.raw`
 
 [Local]
 // custom local...
-# jd
-^https?://api\.m\.jd\.com/client\.action\?functionId=(wareBusiness|serverConfig) url script-response-body https://raw.githubusercontent.com/yichahucha/surge/master/jd_price.js
-
-# tb
-^http://.+/amdc/mobileDispatch url script-request-body https://raw.githubusercontent.com/yichahucha/surge/master/tb_price.js
-^https?://trade-acs\.m\.taobao\.com/gw/mtop\.taobao\.detail\.getdetail url script-response-body https://raw.githubusercontent.com/yichahucha/surge/master/tb_price.js
 
 
 [Hostname]
 // custom hostname...
-trade-acs.m.taobao.com, api.m.jd.com
 
 `
 
