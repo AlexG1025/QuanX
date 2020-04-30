@@ -1,4 +1,4 @@
-hostname = api.m.jd.com,api.rr.tv,api.shimo.im,trade-acs.m.taobao.com,api.zhihu.com,vip1.kuwo.cn,*.xiaoxiao*.com,getuserinfo-globalapi.zymk.cn,account.wps.*,biz.caiyunapp.com,ap*.intsig.net,receipt-validator.herewetest.com,api.textnow.me
+hostname = api.m.jd.com,api.rr.tv,api.shimo.im,trade-acs.m.taobao.com,api.zhihu.com,vip1.kuwo.cn,*.xiaoxiao*.com,getuserinfo-globalapi.zymk.cn,account.wps.*,biz.caiyunapp.com,ap*.intsig.net,receipt-validator.herewetest.com,api.textnow.me,api.gamer.com.tw
 
 ^https:\/\/api\.rr\.tv(\/user\/privilege\/list|\/ad\/getAll|\/rrtv-video\/v4plus\/season\/detail) url script-response-body eval_script.js
 
@@ -35,3 +35,7 @@ https:\/\/.*\.xiaoxiao.*\.com\/(vod\/reqplay\/|ucp/index|getGlobalData) url scri
 ^https:\/\/receipt-validator\.herewetest\.com\/apple\/verifyTransaction$ url script-response-body eval_script.js
 
 ^https:\/\/api\.textnow\.me\/api2.0\/users\/.* url script-response-body eval_script.js
+
+https:\/\/api\.gamer\.com\.tw\/mobile_app\/anime\/v3\/token\.php url script-request-header eval_script.js
+
+https:\/\/api\.gamer\.com\.tw\/mobile_app\/anime\/v3\/token\.php url script-response-body eval_script.js
