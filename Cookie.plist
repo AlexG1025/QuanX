@@ -1,4 +1,4 @@
-hostname = api.m.jd.com, www.52pojie.cn, music.163.com, *.rr.tv, api.dongqiudi.com, act.10010.com, m.client.10010.com, zt.wps.cn
+hostname = api.m.jd.com, www.52pojie.cn, music.163.com, *.rr.tv, api.dongqiudi.com, act.10010.com, m.client.10010.com, zt.wps.cn, api.weibo.cn, pay.sc.weibo.com
 
 # 京东签到获取cookie
 https:\/\/api\.m\.jd\.com\/client\.action.*functionId=signBean url script-request-header https://raw.githubusercontent.com/NobyDa/Script/master/JD-DailyBonus/JD_DailyBonus.js
@@ -22,3 +22,8 @@ https:\/\/www\.52pojie\.cn\/home\.php\?mod=space url script-request-header https
 
 # WPS
 ^https:\/\/zt.wps.cn\/2018\/docer_check_in\/api\/act_list url script-request-header https://raw.githubusercontent.com/chavyleung/scripts/master/wps/wps.cookie.js
+
+# > 微博 (By @Macsuny)
+https:\/\/api\.weibo\.cn\/\d\/video\/machine\?gsid url script-request-header https://raw.githubusercontent.com/Sunert/Scripts/master/Task/weibo.js
+# 钱包
+https:\/\/pay\.sc\.weibo\.com\/aj\/mobile\/home\/welfare\/signin\/do\? url script-request-header https://raw.githubusercontent.com/Sunert/Scripts/master/Task/weibo.js
