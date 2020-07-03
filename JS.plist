@@ -1,4 +1,4 @@
-hostname = mp.weixin.qq.com, *.zhuhu.com, *.kuwo.cn, account.wps.cn, trade-acs.m.taobao.com, api.m.jd.com, *.xiaoxiao*.com, biz.caiyunapp.com, api.textnow.me, *.rr.tv, receipt-validator.herewetest.com, 
+hostname = mp.weixin.qq.com, *.zhuhu.com, *.kuwo.cn, account.wps.cn, trade-acs.m.taobao.com, api.m.jd.com, *.*apps.com, *.xiao*.com, biz.caiyunapp.com, api.textnow.me, *.rr.tv, receipt-validator.herewetest.com, 
 
 
 # 去微信公众号广告 (By Choler)
@@ -29,12 +29,10 @@ https://api.zhihu.com/v4/questions url script-response-body https://raw.githubus
 ^http://.+/amdc/mobileDispatch url script-request-body https://raw.githubusercontent.com/yichahucha/surge/master/tb_price.js
 ^https?://trade-acs\.m\.taobao\.com/gw/mtop\.taobao\.detail\.getdetail url script-response-body https://raw.githubusercontent.com/yichahucha/surge/master/tb_price.js
 
-# 小小影视Vip (By Meeta)
-# > 小小影视 Qx版
-# 会员
+# 小小影视
+https:\/\/.*\..*\.com\/(vod\/reqplay\/|ucp/index|getGlobalData) url script-response-body https://raw.githubusercontent.com/JungegeCN/JGG/master/xxys.js.js
+
 https:\/\/.*.xiaoxiao(img|apps|appxs).com url request-header (\r\n)Cookie:.+(\r\n) request-header $1Cookie: xxx_api_auth=6131333537653261363463323331666265663763396239663835636662373930$2
-# 去广告
-https:\/\/.*\/getGlobalData url script-response-body https://raw.githubusercontent.com/Alex0510/Eric/master/surge/Script/xxysad.js
 
 # 彩云天气 Vip
 ^https:\/\/biz\.caiyunapp\.com\/v2\/user\?app_name\=weather url script-response-body https://raw.githubusercontent.com/nzw9314/QuantumultX/master/NobyDa/QuantumultX/File/ColorWeather.js
