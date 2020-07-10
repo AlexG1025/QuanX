@@ -1,4 +1,4 @@
-hostname = mp.weixin.qq.com, *.zhuhu.com, *.kuwo.cn, account.wps.cn, trade-acs.m.taobao.com, api.m.jd.com, biz.caiyunapp.com, api.textnow.me, *.rr.tv, receipt-validator.herewetest.com, 
+hostname = mp.weixin.qq.com, *.zhuhu.com, *.kuwo.cn, account.wps.cn, trade-acs.m.taobao.com, api.m.jd.com, biz.caiyunapp.com, api.textnow.me, *.rr.tv, receipt-validator.herewetest.com, api.gamer.com.tw
 
 
 # 去微信公众号广告 (By Choler)
@@ -40,3 +40,7 @@ https://api.zhihu.com/v4/questions url script-response-body https://raw.githubus
 
 #speak&translate
 ^https:\/\/receipt-validator\.herewetest\.com\/apple\/verifyTransaction$ url script-response-body https://raw.githubusercontent.com/langkhach270389/Scripting/master/speak&translate.js
+
+# 动画疯 去广告(by NobyDa)
+https:\/\/api\.gamer\.com\.tw\/mobile_app\/anime\/v3\/token\.php url script-request-header https://raw.githubusercontent.com/NobyDa/Script/master/Surge/JS/Bahamut.js
+https:\/\/api\.gamer\.com\.tw\/mobile_app\/anime\/v3\/token\.php url script-response-body https://raw.githubusercontent.com/NobyDa/Script/master/Surge/JS/Bahamut.js
