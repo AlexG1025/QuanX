@@ -1,4 +1,4 @@
-hostname = mp.weixin.qq.com, *.zhuhu.com, *.kuwo.cn, account.wps.cn, trade-acs.m.taobao.com, api.m.jd.com, biz.caiyunapp.com, api.textnow.me, *.rr.tv, receipt-validator.herewetest.com, api.gamer.com.tw
+hostname = mp.weixin.qq.com, *.zhuhu.com, *.kuwo.cn, account.wps.cn, trade-acs.m.taobao.com, api.m.jd.com, biz.caiyunapp.com, api.textnow.me, *.rr.tv, receipt-validator.herewetest.com, api.gamer.com.tw, ios.prod.ftl.netflix.com 
 
 
 # 去微信公众号广告 (By Choler)
@@ -38,9 +38,12 @@ https://api.zhihu.com/v4/questions url script-response-body https://raw.githubus
 #人人视频 (by@george Jiang & R)
 ^https:\/\/api\.rr\.tv(\/user\/privilege\/list|\/ad\/getAll|\/rrtv-video\/v4plus\/season\/detail) url script-response-body https://raw.githubusercontent.com/nzw9314/QuantumultX/master/Script/rrtv.js
 
-#speak&translate
-^https:\/\/receipt-validator\.herewetest\.com\/apple\/verifyTransaction$ url script-response-body https://raw.githubusercontent.com/langkhach270389/Scripting/master/speak&translate.js
-
 # 动画疯 去广告(by NobyDa)
 #https:\/\/api\.gamer\.com\.tw\/mobile_app\/anime\/v3\/token\.php url script-request-header https://raw.githubusercontent.com/NobyDa/Script/master/Surge/JS/Bahamut.js
 #https:\/\/api\.gamer\.com\.tw\/mobile_app\/anime\/v3\/token\.php url script-response-body https://raw.githubusercontent.com/NobyDa/Script/master/Surge/JS/Bahamut.js
+
+#Netflix获取评分(by yichahucha)
+^https?://ios\.prod\.ftl\.netflix\.com/iosui/user/.+path=%5B%22videos%22%2C%\d+%22%2C%22summary%22%5D url script-request-header https://raw.githubusercontent.com/yichahucha/surge/master/nf_rating.js
+^https?://ios\.prod\.ftl\.netflix\.com/iosui/user/.+path=%5B%22videos%22%2C%\d+%22%2C%22summary%22%5D url script-response-body https://raw.githubusercontent.com/yichahucha/surge/master/nf_rating.js
+# 单集评分
+^https?://ios\.prod\.ftl\.netflix\.com/iosui/warmer/.+type=show-ath url script-response-body https://raw.githubusercontent.com/yichahucha/surge/master/nf_rating_season.js
