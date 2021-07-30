@@ -1,4 +1,4 @@
-hostname = mp.weixin.qq.com,  www.zhihu.com, api.zhihu.com, *.kuwo.cn, account.wps.cn, trade-acs.m.taobao.com, api.m.jd.com, biz.caiyunapp.com, *.rr.tv, ap?.bilibili.com, testflight.apple.com 
+hostname = mp.weixin.qq.com,  www.zhihu.com, api.zhihu.com, *.kuwo.cn, account.wps.cn, trade-acs.m.taobao.com, biz.caiyunapp.com, *.rr.tv, ap?.bilibili.com, testflight.apple.com 
 
 
 # 去微信公众号广告 (By Choler)
@@ -10,9 +10,6 @@ hostname = mp.weixin.qq.com,  www.zhihu.com, api.zhihu.com, *.kuwo.cn, account.w
 
 # WPS (By eHpo)
 ^https://account.wps.*/api/users/ url script-response-body https://raw.githubusercontent.com/NobyDa/Script/master/Surge/JS/Wps.js
-
-# 京东比价(By yichahucha)
-^https?://api\.m\.jd\.com/client\.action\?functionId=(wareBusiness|serverConfig|basicConfig) url script-response-body https://raw.githubusercontent.com/JDHelloWorld/jd_price/main/jd_price.js
 
 #淘宝比价(By yichahucha)
 ^http://.+/amdc/mobileDispatch url script-request-body https://raw.githubusercontent.com/yichahucha/surge/master/tb_price.js
